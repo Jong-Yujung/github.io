@@ -1,0 +1,170 @@
+[index.html](https://github.com/user-attachments/files/22461931/index.html)
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>기내 반입 제한 품목 안내</title>
+  <style>
+    :root { --brand:#004aad; --fg:#222; --bg:#f9f9f9; --card:#fff; --muted:#555; }
+    *{box-sizing:border-box}
+    body{font-family:system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, "Noto Sans KR", "Malgun Gothic", Arial, sans-serif; line-height:1.6; margin:0; color:var(--fg); background:var(--bg)}
+    header{background:var(--brand); color:#fff; padding:1rem}
+    h1{margin:0; text-align:center}
+    main{max-width:900px; margin:0 auto; padding:1.5rem}
+    .bar{display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; justify-content:center; margin:.5rem auto 0; max-width:900px}
+    .lang{appearance:none; border:1px solid #d0d7de; background:#fff; padding:.5rem .8rem; border-radius:10px; font-weight:700; cursor:pointer}
+    .lang.active{outline:2px solid color-mix(in srgb, var(--brand) 60%, transparent)}
+    section{background:var(--card); padding:1.2rem 1.5rem; margin-bottom:1rem; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,.08)}
+    h2{color:var(--brand); margin-top:0}
+    h3{margin-bottom:.5rem}
+    ul{padding-left:1.1rem; margin:.3rem 0}
+    .law{font-size:.95rem; color:var(--muted); margin-bottom:.6rem}
+    footer{text-align:center; padding:1rem; font-size:.95rem; background:#eee}
+    .top{position:sticky; top:0; z-index:5; background:color-mix(in srgb, var(--brand) 100%, transparent 0%)}
+    .wrap{max-width:900px; margin:0 auto; padding:.5rem 1rem}
+    .ghost{appearance:none; border:1px solid #d0d7de; background:#fff; padding:.5rem .8rem; border-radius:10px; cursor:pointer}
+    @media print{.bar,.ghost{display:none}}
+  </style>
+</head>
+<body>
+  <!-- 언어 선택 바 -->
+  <div class="top">
+    <div class="wrap bar" role="navigation" aria-label="language">
+      <button class="lang" data-lang="ko">한국어</button>
+      <button class="lang" data-lang="en">English</button>
+      <button class="lang" data-lang="ja">日本語</button>
+      <button class="lang" data-lang="zh">中文</button>
+      <button class="lang" data-lang="vi">Tiếng Việt</button>
+      <button class="lang" data-lang="th">ไทย</button>
+      <button class="lang" data-lang="ru">Русский</button>
+      <button class="lang" data-lang="es">Español</button>
+      <button class="lang" data-lang="fr">Français</button>
+      <span style="flex:1"></span>
+      <button class="ghost" id="printBtn" data-i18n="print">인쇄/PDF</button>
+    </div>
+  </div>
+
+  <header>
+    <h1 data-i18n="title">기내 반입 제한 품목 안내</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2 data-i18n="law_h2">관련 근거</h2>
+      <p class="law" data-i18n="law_p">
+        「항공보안법」 제21조 제1항, 국토교통부고시 제2021-1274호 ‘항공기 내 반입금지 위해물품’<br>
+        「항공보안법」 제14조 제5항, 국토교통부고시 제2021-864호 ‘액체·분무·겔류 등 항공기내 휴대 반입 금지물질 운영기준’
+      </p>
+    </section>
+
+    <section>
+      <h2 data-i18n="liquid_h2">액체/겔류</h2>
+      <ul>
+        <li data-i18n="liquid_li1">100ML 이상의 용기에 담긴 액체/겔류 제품은 기내 반입 불가</li>
+        <li data-i18n="liquid_li2">국물이 포함된 음식(김치), 장류(고추장, 된장, 잼, 크림치즈 등), 녹는 제형 음식(아이스크림 등)은 100ml 초과 시 반입 불가</li>
+      </ul>
+      <h3 data-i18n="solution_h3">해결방안</h3>
+      <ul>
+        <li data-i18n="sol_dispose">폐기</li>
+        <li data-i18n="sol_checkin">항공사 카운터에 방문하여 위탁수하물 접수 (추가 요금 발생 가능)</li>
+        <li data-i18n="sol_services">공항 내 짐 보관 서비스 또는 국내 택배 서비스 이용</li>
+        <li data-i18n="sol_repack">100ML 이하 용기에 소분</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="blade_h2">도검류</h2>
+      <p data-i18n="blade_p">끝이 뾰족하거나 날카로운 물체는 기내 반입 불가 (면도칼날, 커터칼날, 다목적 칼, 접이식 칼, 외과용 메스, 날 길이 6cm 초과 가위 등)</p>
+      <h3 data-i18n="solution_h3">해결방안</h3>
+      <ul>
+        <li data-i18n="sol_dispose">폐기</li>
+        <li data-i18n="sol_checkin">항공사 카운터에 방문하여 위탁수하물 접수 (추가 요금 발생 가능)</li>
+        <li data-i18n="sol_services">공항 내 짐 보관 서비스 또는 국내 택배 서비스 이용</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="tool_h2">공구류</h2>
+      <p data-i18n="tool_p">망치, 드릴 및 부품, 금속 길이 6cm 초과 드라이버 등은 기내 반입 불가</p>
+      <h3 data-i18n="solution_h3">해결방안</h3>
+      <ul>
+        <li data-i18n="sol_dispose">폐기</li>
+        <li data-i18n="sol_checkin">항공사 카운터에 방문하여 위탁수하물 접수 (추가 요금 발생 가능)</li>
+        <li data-i18n="sol_services">공항 내 짐 보관 서비스 또는 국내 택배 서비스 이용</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="sport_h2">둔기 및 스포츠용품</h2>
+      <p data-i18n="sport_p1">야구 방망이, 곤봉, 아령, 수갑류는 기내 반입 불가</p>
+      <p data-i18n="sport_p2">공기가 1/3 이상 주입된 축구공 등 공류 및 풍선류는 객실·위탁수하물 모두 반입 불가</p>
+      <h3 data-i18n="solution_h3">해결방안</h3>
+      <ul>
+        <li data-i18n="sol_dispose">폐기</li>
+        <li data-i18n="sol_checkin">항공사 카운터에 방문하여 위탁수하물 접수 (추가 요금 발생 가능)</li>
+        <li data-i18n="sol_services">공항 내 짐 보관 서비스 또는 국내 택배 서비스 이용</li>
+        <li data-i18n="sport_airoff">공류: 공기를 1/3 미만으로 뺀 후 소지</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-i18n="selfdef_h2">호신용품</h2>
+      <p data-i18n="selfdef_p">전자충격기, 고추스프레이, 쿠보탄 등 위해 물품은 기내 반입 불가</p>
+    </section>
+  </main>
+
+  <footer data-i18n="foot">
+    ※ 본 안내는 항공사 및 국가별 세부 규정에 따라 달라질 수 있으며, 최종 판단은 보안검색요원 및 항공사에 따릅니다.
+  </footer>
+
+  <script>
+    const dict = { ko:{ title:"기내 반입 제한 품목 안내", print:"인쇄/PDF", law_h2:"관련 근거",
+      law_p:"「항공보안법」 제21조 제1항, 국토교통부고시 제2021-1274호 ‘항공기 내 반입금지 위해물품’<br>「항공보안법」 제14조 제5항, 국토교통부고시 제2021-864호 ‘액체·분무·겔류 등 항공기내 휴대 반입 금지물질 운영기준’",
+      liquid_h2:"액체/겔류", liquid_li1:"100ML 이상의 용기에 담긴 액체/겔류 제품은 기내 반입 불가",
+      liquid_li2:"국물이 포함된 음식(김치), 장류(고추장, 된장, 잼, 크림치즈 등), 녹는 제형 음식(아이스크림 등)은 100ml 초과 시 반입 불가",
+      solution_h3:"해결방안", sol_dispose:"폐기", sol_checkin:"항공사 카운터에 방문하여 위탁수하물 접수 (추가 요금 발생 가능)",
+      sol_services:"공항 내 짐 보관 서비스 또는 국내 택배 서비스 이용", sol_repack:"100ML 이하 용기에 소분",
+      blade_h2:"도검류", blade_p:"끝이 뾰족하거나 날카로운 물체는 기내 반입 불가 (면도칼날, 커터칼날, 다목적 칼, 접이식 칼, 외과용 메스, 날 길이 6cm 초과 가위 등)",
+      tool_h2:"공구류", tool_p:"망치, 드릴 및 부품, 금속 길이 6cm 초과 드라이버 등은 기내 반입 불가",
+      sport_h2:"둔기 및 스포츠용품", sport_p1:"야구 방망이, 곤봉, 아령, 수갑류는 기내 반입 불가",
+      sport_p2:"공기가 1/3 이상 주입된 축구공 등 공류 및 풍선류는 객실·위탁수하물 모두 반입 불가", sport_airoff:"공류: 공기를 1/3 미만으로 뺀 후 소지",
+      selfdef_h2:"호신용품", selfdef_p:"전자충격기, 고추스프레이, 쿠보탄 등 위해 물품은 기내 반입 불가",
+      foot:"※ 본 안내는 항공사 및 국가별 세부 규정에 따라 달라질 수 있으며, 최종 판단은 보안검색요원 및 항공사에 따릅니다."},
+      en:{ title:"Carry-on Prohibited/Restricted Items", print:"Print/PDF", law_h2:"Legal basis",
+      law_p:"Aviation Security Act Art. 21(1); MOLIT Notice 2021-1274 (Prohibited Items on Board)<br>Aviation Security Act Art. 14(5); MOLIT Notice 2021-864 (Liquids/Aerosols/Gels Carry-on Rules)",
+      liquid_h2:"Liquids/Gels", liquid_li1:"Liquids/gels in containers over 100 ml are not permitted in the cabin",
+      liquid_li2:"Soupy foods (e.g., kimchi), pastes (gochujang, doenjang, jam, cream cheese), and meltable foods (ice cream) over 100 ml are not allowed",
+      solution_h3:"What you can do", sol_dispose:"Dispose", sol_checkin:"Return to airline counter to check in (extra fee may apply)",
+      sol_services:"Use airport storage or domestic courier services", sol_repack:"Repack into containers of 100 ml or less",
+      blade_h2:"Blades/Sharp objects", blade_p:"Sharp/pointed items are not allowed (razor blades, utility blades, multipurpose/folding knives, surgical scalpels, scissors with blades > 6 cm, etc.)",
+      tool_h2:"Tools", tool_p:"Hammers, drills/parts, screwdrivers with metal length over 6 cm, etc., are not allowed in cabin",
+      sport_h2:"Blunt & sports items", sport_p1:"Baseball bats, batons, dumbbells, handcuffs are not allowed in cabin",
+      sport_p2:"Balls/balloons inflated over one-third are not allowed in cabin or checked baggage",
+      sport_airoff:"Balls: deflate to under one-third before carrying",
+      selfdef_h2:"Self-defense items", selfdef_p:"Stun guns, pepper spray, kubotan, and similar items are not allowed",
+      foot:"Rules may vary by airline/destination. Final decision by security officers/airline."}
+    };
+    const $ = (s, r=document)=>r.querySelector(s);
+    const $$ = (s, r=document)=>Array.from(r.querySelectorAll(s));
+    const state = { lang: localStorage.getItem('lang') || document.documentElement.lang || 'ko' };
+    function apply() {
+      const t = dict[state.lang] || dict.ko;
+      document.documentElement.lang = state.lang;
+      $$('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if (!key) return;
+        if (key.endsWith('_p') || key==='law_p') el.innerHTML = t[key] ?? el.innerHTML;
+        else el.textContent = t[key] ?? el.textContent;
+      });
+      document.title = t.title;
+      $$('.lang').forEach(b => b.classList.toggle('active', b.dataset.lang===state.lang));
+      const printBtn = $('#printBtn'); if (printBtn && t.print) printBtn.textContent = t.print;
+    }
+    function setLang(l){ state.lang = l; localStorage.setItem('lang', l); apply(); }
+    $$('.lang').forEach(b=> b.addEventListener('click', ()=> setLang(b.dataset.lang)));
+    $('#printBtn')?.addEventListener('click', ()=> window.print());
+    apply();
+  </script>
+</body>
+</html>
